@@ -17,7 +17,7 @@ function Invoke-Git-Fetch {
 }
 
 function Invoke-Git-Pull {
-    & git fetch $args
+    & git pull $args
 }
 
 function Invoke-Git-Push {
