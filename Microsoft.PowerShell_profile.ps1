@@ -44,6 +44,14 @@ function Invoke-Git-Diff {
     & git diff $args
 }
 
+function Invoke-Git-Branch {
+    & git branch $args
+}
+
+function Invoke-Git-Checkout {
+    & git checkout $args
+}
+
 Remove-Alias gl
 Remove-Alias gp
 Remove-Alias gc
@@ -57,6 +65,8 @@ New-Alias ga Invoke-Git-Add
 New-Alias gc Invoke-Git-Commit
 New-Alias gh Invoke-Git-History
 New-Alias gd Invoke-Git-Diff
+New-Alias gb Invoke-Git-Branch
+New-Alias gco Invoke-Git-Checkout
 
 
 # Chocolatey profile
