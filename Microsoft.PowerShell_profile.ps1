@@ -9,33 +9,39 @@ function Remove-Alias ([string] $AliasName) {
 }
 
 function Invoke-Git-Status {
-    & git 'status'
+    & git status
 }
 
 function Invoke-Git-Fetch {
-    & git 'fetch'
+    & git fetch
 }
 
 function Invoke-Git-Pull {
-    & git 'fetch'
+    & git fetch
 }
 
 function Invoke-Git-Push {
-    & git 'push'
+    & git push
 }
 
 function Invoke-Git-Add {
-    & git 'add' $args
+    & git add $args
+}
+
+function Invoke-Git-Commit {
+    & git commit $args
 }
 
 Remove-Alias gl
 Remove-Alias gp
+Remove-Alias gc
 
 New-Alias g Invoke-Git-Status
 New-Alias gf Invoke-Git-Fetch
 New-Alias gl Invoke-Git-Pull
 New-Alias gp Invoke-Git-Push
 New-Alias ga Invoke-Git-Add
+New-Alias gc Invoke-Git-Commit
 
 
 # Chocolatey profile
