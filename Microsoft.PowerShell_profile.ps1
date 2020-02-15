@@ -32,6 +32,10 @@ function Invoke-Git-Commit {
     & git commit $args
 }
 
+function Invoke-Git-History {
+    & git log  --graph --date=short --pretty=format:"%Cred%h%Creset %Cgreen%ad%Creset | %s %b%C(yellow)%d%Creset %C(bold blue)[%an]%Creset"
+}
+
 Remove-Alias gl
 Remove-Alias gp
 Remove-Alias gc
@@ -42,6 +46,7 @@ New-Alias gl Invoke-Git-Pull
 New-Alias gp Invoke-Git-Push
 New-Alias ga Invoke-Git-Add
 New-Alias gc Invoke-Git-Commit
+New-Alias gh Invoke-Git-History
 
 
 # Chocolatey profile
