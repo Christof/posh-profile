@@ -13,15 +13,15 @@ function Invoke-Git-Status {
 }
 
 function Invoke-Git-Fetch {
-    & git fetch
+    & git fetch $args
 }
 
 function Invoke-Git-Pull {
-    & git fetch
+    & git fetch $args
 }
 
 function Invoke-Git-Push {
-    & git push
+    & git push $args
 }
 
 function Invoke-Git-Add {
