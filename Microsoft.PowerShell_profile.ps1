@@ -24,6 +24,10 @@ function Invoke-Git-Push {
     & git push $args
 }
 
+function Invoke-Git-Push-Upstream {
+    & git push -u origin HEAD $args
+}
+
 function Invoke-Git-Add {
     & git add $args
 }
@@ -48,6 +52,7 @@ New-Alias g Invoke-Git-Status
 New-Alias gf Invoke-Git-Fetch
 New-Alias gl Invoke-Git-Pull
 New-Alias gp Invoke-Git-Push
+New-Alias gpu Invoke-Git-Push-Upstream
 New-Alias ga Invoke-Git-Add
 New-Alias gc Invoke-Git-Commit
 New-Alias gh Invoke-Git-History
