@@ -36,6 +36,10 @@ function Invoke-Git-History {
     & git log  --graph --date=short --pretty=format:"%Cred%h%Creset %Cgreen%ad%Creset | %s %b%C(yellow)%d%Creset %C(bold blue)[%an]%Creset"
 }
 
+function Invoke-Git-Diff {
+    & git diff $args
+}
+
 Remove-Alias gl
 Remove-Alias gp
 Remove-Alias gc
@@ -47,6 +51,7 @@ New-Alias gp Invoke-Git-Push
 New-Alias ga Invoke-Git-Add
 New-Alias gc Invoke-Git-Commit
 New-Alias gh Invoke-Git-History
+New-Alias gd Invoke-Git-Diff
 
 
 # Chocolatey profile
